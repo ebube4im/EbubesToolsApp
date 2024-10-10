@@ -20,6 +20,28 @@
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
+
+        private void OnOneClicked(object sender, EventArgs e)
+        {
+            DisplayAlert("Notice", "One was clicked", "Exit");
+
+            SemanticScreenReader.Announce(CounterBtn.Text);
+        }
+
+        private void OnTwoClicked(object sender, EventArgs e)
+        {
+
+
+            DisplayAlert("Notice", "Two was clicked", "Exit");
+
+            SemanticScreenReader.Announce(CounterBtn.Text);
+        }
+
+        private void OnThreeClicked(object sender, EventArgs e)
+        {
+            DisplayAlert("Notice", "Three was clicked", "Exit");
+            SemanticScreenReader.Announce(CounterBtn.Text);
+        }
     }
 
 }
