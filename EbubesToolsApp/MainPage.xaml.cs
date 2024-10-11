@@ -3,6 +3,11 @@
     public partial class MainPage : ContentPage
     {
         int count = 0;
+        double firstInput = 0;
+        double secondInput = 0;
+        double result = 0;
+        string selectedOperator = "";
+        string operations = "";
 
         public MainPage()
         {
@@ -21,26 +26,65 @@
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
 
-        private void OnOneClicked(object sender, EventArgs e)
+        private void Display(object sender, EventArgs e)
         {
-            DisplayAlert("Notice", "One was clicked", "Exit");
+            var button = (Button)sender;
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            DisplayBox.Text = DisplayBox.Text + button.Text;
+
+            // DisplayAlert("Notice", button.Text, "Exit");
+
+
         }
 
-        private void OnTwoClicked(object sender, EventArgs e)
+        private void Operator(object sender, EventArgs e)
         {
+            firstInput = double.Parse(DisplayBox.Text);
+            var button = (Button)sender;
+            selectedOperator = button.Text;
+            operations = $"{firstInput} {selectedOperator} ";
+            DisplayBox.Text = "";
 
 
-            DisplayAlert("Notice", "Two was clicked", "Exit");
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
         }
 
-        private void OnThreeClicked(object sender, EventArgs e)
+        private void Calculate(object sender, EventArgs e)
         {
-            DisplayAlert("Notice", "Three was clicked", "Exit");
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            secondInput = double.Parse(DisplayBox.Text);
+
+
+            switch (selectedOperator)
+            {
+                case "+":
+                    result = firstInput + secondInput;
+                    break;
+                case "-":
+                    result = firstInput - secondInput;
+                    break;
+                case "*":
+                    result = firstInput * secondInput;
+                    break;
+                case "/":
+                    result = firstInput / secondInput;
+                    break;
+                default:
+                    result = firstInput;
+                    break;
+            }
+
+            operations = $"{firstInput} {selectedOperator} {secondInput} = {result} ";
+            DisplayBox.Text = operations;
+
+
+        }
+
+        private void Clear(object sender, EventArgs e)
+        {
+            firstInput = 0;
+            secondInput = 0;
+            result = 0;
+            DisplayBox.Text = "";
+            operations = "";
         }
     }
 

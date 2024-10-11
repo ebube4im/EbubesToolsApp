@@ -21,31 +21,200 @@
             <Label
                 Text="A simple project to help me test out my Cross Platform App dev with C# MAUI"
                 Style="{StaticResource SubHeadline}"
+                FontSize="Small"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
 
-            <HorizontalStackLayout Padding="20,0">
+            
+            <Entry
+                x:Name ="DisplayBox"
+               
+                IsReadOnly="True" 
+                FontSize="40"
+                
+                />
+
+            <HorizontalStackLayout 
+                
+                >
                 <Button
                  x:Name="Num1"
                  Text="1" 
+                   
+                    FontSize="30"
+                    Margin="5,0"
+                 Padding="30,0"
                  SemanticProperties.Hint="Number 1"
-                 Clicked="OnOneClicked"
+                 Clicked="Display"
                   />
 
                 <Button
  x:Name="Num2"
  Text="2" 
+                      FontSize="30"
+   Margin="5,0"
+Padding="30,0"
  SemanticProperties.Hint="Number 2"
- Clicked="OnTwoClicked"
+ Clicked="Display"
   />
                 <Button
  x:Name="Num3"
  Text="3" 
+                     FontSize="30"
+   Margin="5,0"
+Padding="30,0"
  SemanticProperties.Hint="Number 3"
- Clicked="OnThreeClicked"
+ Clicked="Display"
+  />
+
+                <Button
+                 x:Name="Division"
+                 Text="/" 
+                   
+                    FontSize="30"
+                    Margin="5,0"
+                 Padding="30,0"
+                 SemanticProperties.Hint="Number 1"
+                 Clicked="Operator"
+                  />
+
+              
+
+            </HorizontalStackLayout>
+            <HorizontalStackLayout 
+                
+                >
+                <Button
+                 x:Name="Num4"
+                 Text="4" 
+                   
+                    FontSize="30"
+                    Margin="5,0"
+                 Padding="30,0"
+                 SemanticProperties.Hint="Number 4"
+                 Clicked="Display"
+                  />
+
+                <Button
+ x:Name="Num5"
+ Text="5" 
+                      FontSize="30"
+   Margin="5,0"
+Padding="30,0"
+ SemanticProperties.Hint="Number 5"
+ Clicked="Display"
+  />
+                <Button
+ x:Name="Num6"
+ Text="6" 
+                     FontSize="30"
+   Margin="5,0"
+Padding="30,0"
+ SemanticProperties.Hint="Number 3"
+ Clicked="Display"
+  />
+
+                <Button
+ x:Name="Minus"
+ Text="-" 
+                      FontSize="30"
+   Margin="5,0"
+Padding="30,0"
+ SemanticProperties.Hint="Number 0"
+ Clicked="Operator"
+  />
+  
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout 
+                
+                >
+                <Button
+                 x:Name="Num7"
+                 Text="7" 
+                   
+                    FontSize="30"
+                    Margin="5,0"
+                 Padding="30,0"
+                 SemanticProperties.Hint="Number 1"
+                 Clicked="Display"
+                  />
+
+                <Button
+ x:Name="Num8"
+ Text="8" 
+                      FontSize="30"
+   Margin="5,0"
+Padding="30,0"
+ SemanticProperties.Hint="Number 8"
+ Clicked="Display"
+  />
+                <Button
+ x:Name="Num9"
+ Text="9" 
+                     FontSize="30"
+   Margin="5,0"
+Padding="30,0"
+ SemanticProperties.Hint="Number 9"
+ Clicked="Display"
+  />
+
+                <Button
+ x:Name="plus"
+ Text="+" 
+                     FontSize="30"
+   Margin="5,0"
+Padding="30,0"
+ SemanticProperties.Hint="Number +"
+ Clicked="Operator"
+  />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout 
+               
+                >
+                <Button
+                 x:Name="Multiply"
+                 Text="*" 
+                   
+                    FontSize="30"
+                    Margin="5,0"
+                 Padding="30,0"
+                 SemanticProperties.Hint="Number 1"
+                 Clicked="Display"
+                  />
+
+                <Button
+ x:Name="Num0"
+ Text="0" 
+                      FontSize="30"
+   Margin="5,0"
+Padding="30,0"
+ SemanticProperties.Hint="Number 0"
+ Clicked="Display"
+  />
+
+                <Button
+ x:Name="Cls"
+ Text="cls" 
+                     FontSize="30"
+   Margin="5,0"
+Padding="20,0"
+ SemanticProperties.Hint="Number ="
+ Clicked="Clear"
+  />
+                <Button
+ x:Name="NumEquals"
+ Text="=" 
+                     FontSize="30"
+   Margin="5,0"
+Padding="30,0"
+ SemanticProperties.Hint="Number ="
+ Clicked="Calculate"
   />
             </HorizontalStackLayout>
             
+
             <Button
                 x:Name="CounterBtn"
                 Text="We are ready to do this...." 
